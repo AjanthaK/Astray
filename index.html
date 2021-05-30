@@ -21,7 +21,7 @@
                 mazeDimension  = 11,
                 planeMesh      = undefined,
                 ballMesh       = undefined,
-                ballRadius     = 0.25,
+                ballRadius     = 0,
                 keyAxis        = [0, 0],
                 ironTexture    = THREE.ImageUtils.loadTexture('/ball.png'),
                 planeTexture   = THREE.ImageUtils.loadTexture('/concrete.png'),
@@ -108,7 +108,7 @@
                 // Add the ball.
                 g = new THREE.SphereGeometry(ballRadius, 32, 16);
                 m = new THREE.MeshPhongMaterial({map:ironTexture});
-                ballMesh = new THREE.Mesh(g, m);
+                ballMesh = ironTexture;
                 ballMesh.position.set(1, 1, ballRadius);
                 scene.add(ballMesh);
 
